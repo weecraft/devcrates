@@ -14,13 +14,13 @@ To set up the project locally, follow these steps:
    ```
 2. Install the dependencies by run
    ```bash
-     npm install --legacy-peer-deps --silent
+     bun install
    ```
 3. Start the development server
    ```bash
      npm run dev
    ```
-4. Open the application in your browser `http://localhost:3000` and studio in `http://localhost:3333`
+4. Open the application in your browser `http://localhost:3000`
 
 ## Issues and Pull Requests
 
@@ -32,6 +32,10 @@ If you want to contribute code, please fork the repository and submit a pull req
 - Follows the Code of Conduct of the project.
 - Adheres to the project's Code Style.
 - Includes a description of the changes made in the pull request.
+
+## Giving Ideas
+
+If you have an idea for a new feature or improvement, please create an issue in the issue tracker. This will allow other contributors to discuss the idea and provide feedback before implementing it.
 
 ## Testing
 

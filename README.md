@@ -1,36 +1,42 @@
-# Personal Site
+# Dev Crates
 
-![Github View](https://github.com/user-attachments/assets/7a86d44c-69d8-4144-a922-c36a93982d5b)
+_"Perfect developer resources & collections"_
 
-_"My personal website to connect and share something with client and audience"_
+Dev crates is a website that provides a collection of developer resources and tools. It is a freemium website that offers a wide range of resources for developers, including databases, clouds, and more. The website is designed to be a one-stop-shop for all your developer needs, with a focus on performance, reliability, and ease of use.
 
-## About
+You can access this site on _[https://devcrates.site](https://devcrates.site)_
 
-This project is contain my personal site apps, including the backend and the frontend.
-The concept of this site is simple, powerful, creative, and clean.
-
-You can access this site on [https://nyomansunima.one](https://nyomansunima.one)
+_Screenshots:_
 
 ## Motivation
 
-When one to connect and cengage with my skill i realize that need a website that can communicate and cover all ide need to my client, audience, friends, and also the collages. That's why i building this project. I want to make website that look cool, fast and modern with simplicity.
+I've been a developer for a long time, and I've always wanted to have a place where I can find all the resources I need to be productive. I wanted to create a website that would be a one-stop-shop for all my developer needs, with a focus on performance, reliability, and ease of use.
 
-I also need include most of my managed project, explorations, status, blog and other. So when i connect with people i can start by sharing my website, and they can explore me what iam doing on.
+## Goals
 
-## Features
+The main goals of this project are:
 
-This project is contain buch of feature included to help me support my workflow
+- To provide a one-stop-shop for all your developer needs
+- To be a freemium website that offers a wide range of resources for developers
+- To be designed to be responsive and accessible on all devices
+- To provide a seamless user experience
+- To be fully SEO optimized
+- To provide a user-friendly interface
+- To provide a good content resources for developers
 
-- Project Showcase
-- Target and Status
-- Explorations into stack and project
-- Service to offer with client
-- Personal bio link profile
-- About me
-- FAQs
-- Newsletter
-- Many other includeds
-- Changelog history and works
+## Content
+
+The content of devcrates.site is mainly focused on providing a collection of developer resources and tools. It includes databases, clouds, and more. The website is designed to be a one-stop-shop for all your developer needs, with a focus on performance, reliability, and ease of use.
+
+- Stacks
+- Tools
+- Sites
+- Blogs
+- Resources
+- Newsletters
+- Books
+- Courses
+- Etc.
 
 ## Stacks
 
@@ -42,6 +48,43 @@ Since building this project here are list about stack, site, tech and any librar
 - [Vercel](https://vercel.com)
 - [Shadcn UI](https://ui.shadcn.com)
 - [Radix UI](https://radix-ui.com)
+- [PostHog](https://posthog.com)
+- [React](https://reactjs.org)
+- [React Query](https://react-query.tanstack.com)
+- [Motion One](https://motion.dev)
+- [Magic UI](https://magicui.design)
+- Etc.
+
+## Features
+
+Here are the features that this project provides:
+
+- Waitinglist
+- Landing Page
+- Responsive
+- Full SEO
+- Support Light and Dark Mode
+- Analytics with PostHog
+- Freemium
+- Freebies
+- Subscription
+- Newsletter
+- Advance search
+- Sponsors
+- AI Recommendations
+- Etc.
+
+## Documentation
+
+You can find the documentation and details about this project in the links below:
+
+- [Learn how to contribute](./CONTRIBUTING.md)
+- [Read the code policy](./CODE_OF_CONDUCT.md)
+- [Read the license](./LICENSE)
+- [Read the changelog](./CHANGELOG.md)
+- [See the discussions](https://github.com/weecraft/devcrates/discussions)
+- [See the issues](https://github.com/weecraft/devcrates/issues)
+- [See the roadmap](./ROADMAP.md)
 
 ## License
 
@@ -49,4 +92,4 @@ This project is maintain under the [MIT License](./LICENSE).
 
 ## Thanks
 
-Thanks to read this project documentation.
+Thanks to read this project documentation. You can support this project by giving a star ⭐ to this repository. And for your special day, you can buy me a coffee ☕ by clicking on the sponsor button.
