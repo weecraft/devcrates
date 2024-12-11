@@ -13,6 +13,9 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
+      - name: Change directory
+        run: cd ./web
+
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
@@ -31,6 +34,9 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
+      - name: Change directory
+        run: cd ./web
+
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
@@ -48,6 +54,9 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v4
+
+      - name: Change directory
+        run: cd ./web
 
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
