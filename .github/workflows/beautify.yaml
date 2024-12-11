@@ -13,18 +13,17 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
-      - name: Change directory
-        run: cd ./web
-
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: Install dependencies
+        working-directory: ./web
         run: bun install
 
       - name: Lint the code
+        working-directory: ./web
         run: bun run typecheck
 
   lint:
@@ -34,18 +33,17 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4
 
-      - name: Change directory
-        run: cd ./web
-
       - name: Setup Bun Environment
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: Install dependencies
+        working-directory: ./web
         run: bun install
 
       - name: Lint the code
+        working-directory: ./web
         run: bun run lint
 
   format:
@@ -64,7 +62,9 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies
+        working-directory: ./web
         run: bun install
 
       - name: Format the code
+        working-directory: ./web
         run: bun run format
