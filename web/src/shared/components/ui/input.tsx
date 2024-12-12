@@ -7,7 +7,7 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<'input'>>(
       <input
         type={type}
         className={mergeClass(
-          'flex items-center h-11 w-full rounded-xl border border-border bg-input px-4 text-sm file:border-0 file:bg-transparent outline-transparent ring-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-foreground/60 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 focus:border-border focus:border-2',
+          'flex items-center h-11 w-full rounded-xl border border-border bg-input px-4 text-[13px] file:border-0 file:bg-transparent outline-transparent ring-transparent file:text-[13px] file:font-medium file:text-foreground placeholder:text-foreground/60 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 focus:border-primary/40 focus:border-2',
           className,
         )}
         ref={ref}

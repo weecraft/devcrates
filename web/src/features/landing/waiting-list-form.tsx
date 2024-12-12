@@ -10,9 +10,13 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@shared/components/ui/form'
-import { Input } from '@shared/components/ui/input'
-import { Button } from '@shared/components/ui/button'
+  Button,
+  Input,
+  showSonner,
+} from '@shared/components'
+import { useMutation } from '@tanstack/react-query'
+import { waitingListService } from './waiting-list-service'
+import { SuccessWaitlistModal } from './success-waitlist-modal'
 
 const formSchema = z.object({
   fullName: z.string().min(2, 'Hey, you are forget fill the name'),
@@ -24,6 +28,8 @@ const formSchema = z.object({
 })
 
 export function WaitingListForm(): React.ReactElement {
+  const [isShowSuccessModal, setIsShowSuccessModal] = React.useState(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -32,10 +38,20 @@ export function WaitingListForm(): React.ReactElement {
     },
   })
 
+  const joinWaitingListMutation = useMutation({
+    mutationFn: waitingListService.joinWaitingList,
+    onError: () => {
+      showSonner('Opps, something went wrong. Please try again later')
+    },
+    onSuccess: () => {
+      setIsShowSuccessModal(true)
+      form.reset()
+    },
+  })
+
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+    const { fullName, email } = values
+    joinWaitingListMutation.mutate({ email, fullName })
   }
 
   return (
@@ -70,12 +86,30 @@ export function WaitingListForm(): React.ReactElement {
             )}
           />
 
-          <Button type="submit" className="mt-5">
-            Join waitlist
-            <i className="fi fi-rr-arrow-right absolute right-4 text-base" />
+          <Button
+            type="submit"
+            disabled={joinWaitingListMutation.isPending}
+            className="mt-5 transition-all duration-300 hover:scale-95"
+          >
+            {joinWaitingListMutation.isPending ? (
+              <>
+                Joining you in ...
+                <i className="fi fi-rr-spinner absolute right-4 text-base animate-spin" />
+              </>
+            ) : (
+              <>
+                Join waitlist
+                <i className="fi fi-rr-arrow-right absolute right-4 text-base" />
+              </>
+            )}
           </Button>
         </form>
       </Form>
+
+      <SuccessWaitlistModal
+        isOpen={isShowSuccessModal}
+        onOpenChange={setIsShowSuccessModal}
+      />
     </div>
   )
 }

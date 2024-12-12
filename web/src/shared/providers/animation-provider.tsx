@@ -11,7 +11,7 @@ export function AnimationProvider({
   children,
 }: AnimationProviderProps): React.ReactElement {
   return (
-    <ReactLenis root options={{ lerp: 0.2, duration: 1.6 }}>
+    <ReactLenis root options={{ lerp: 0.2, duration: 1.2 }}>
       {children}
     </ReactLenis>
   )

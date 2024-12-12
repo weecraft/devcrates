@@ -10,6 +10,7 @@ import {
   QueryProvider,
   ThemeProvider,
 } from '@shared/providers'
+import { Toaster } from '@shared/components'
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -58,10 +59,14 @@ export default function RootLayout({
   children,
 }: Readonly<RootLayoutProps>): React.ReactElement {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${fonts.inter.variable}`}
+      suppressHydrationWarning
+    >
       <PosthogProvider>
         <AnimationProvider>
-          <body className={`${fonts.inter.variable}`}>
+          <body>
             <ThemeProvider
               attribute={'class'}
               defaultTheme="system"
@@ -69,6 +74,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               <QueryProvider>{children}</QueryProvider>
+              <Toaster />
             </ThemeProvider>
           </body>
         </AnimationProvider>

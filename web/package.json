@@ -15,6 +15,7 @@
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.3.1",
     "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.4",
@@ -31,6 +32,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hook-form": "^7.54.0",
+    "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "zod": "^3.24.1"
   },

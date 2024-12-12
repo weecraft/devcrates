@@ -1,50 +1,45 @@
-import Image from 'next/image'
 import * as React from 'react'
 import { WaitingListForm } from './waiting-list-form'
+import Link from 'next/link'
 import {
+  DynamicLogo,
+  Meteors,
+  Spotlight,
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@shared/components/ui/tooltip'
-import Link from 'next/link'
+} from '@shared/components'
 
 export function WaitingSection(): React.ReactElement {
   return (
-    <section className="flex flex-col container mx-auto">
-      <div className="flex flex-col items-center py-52">
-        <div className="flex">
-          <Image
-            src={
-              'https://cdn.hashnode.com/res/hashnode/image/upload/v1733929141883/afa49f0c-7a26-496e-8f5d-384021654627.png'
-            }
-            width={60}
-            height={60}
-            alt="Image"
-          />
+    <section className="flex flex-col container mx-auto relative px-5 tablet:px-0">
+      <div className="flex flex-col items-center pt-20 tablet:pt-40 pb-10 relative z-10">
+        <div className="flex cursor-pointer transition-all duration-300 hover:scale-95">
+          <DynamicLogo width={60} height={60} />
         </div>
 
-        <p className="text-foreground/60 text-center mt-5">
+        <p className="text-foreground/60 text-center mt-5 text-sm">
           Developer Collections
           <br />
-          <span className="text-foreground">(Devcrates)</span>
+          <span className="text-foreground font-medium">(Devcrates)</span>
         </p>
 
-        <h2 className="text-5xl !leading-tight font-medium mt-10 text-center">
+        <h2 className="text-3xl tablet:text-5xl !leading-tight font-medium mt-10 text-center">
           Join the waitlist for <br />{' '}
           <span className="text-accent">developer resources</span>
         </h2>
 
-        <div className="flex mt-20 justify-center w-4/12 mx-auto">
+        <div className="flex mt-20 justify-center w-full tablet:w-4/12 mx-auto">
           <WaitingListForm />
         </div>
 
         <div className="flex flex-col mt-52 items-center">
-          <div className="flex flex-col items-cente text-center text-foreground/70 gap-4">
+          <div className="flex flex-col items-cente text-center text-foreground/70 gap-4 text-sm">
             <p>
               Design & develop by{' '}
               <Link
-                href={'https://nyomansunima.one'}
+                href={'https://nyomansunima.one?ref=devcrates'}
                 target="_blank"
                 className="font-medium text-foreground"
               >
@@ -65,7 +60,7 @@ export function WaitingSection(): React.ReactElement {
             <p>
               Powered & supply by{' '}
               <Link
-                href={'https://weecraft.club'}
+                href={'https://weecraft.club?ref=devcrates'}
                 target="_blank"
                 className="font-medium text-foreground"
               >
@@ -82,6 +77,9 @@ export function WaitingSection(): React.ReactElement {
           </div>
         </div>
       </div>
+
+      <Meteors number={14} />
+      <Spotlight />
     </section>
   )
 }
