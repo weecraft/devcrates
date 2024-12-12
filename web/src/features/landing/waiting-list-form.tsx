@@ -17,6 +17,7 @@ import {
 import { useMutation } from '@tanstack/react-query'
 import { waitingListService } from './waiting-list-service'
 import { SuccessWaitlistModal } from './success-waitlist-modal'
+import posthog from 'posthog-js'
 
 const formSchema = z.object({
   fullName: z.string().min(2, 'Hey, you are forget fill the name'),
@@ -51,6 +52,10 @@ export function WaitingListForm(): React.ReactElement {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const { fullName, email } = values
+
+    posthog.identify(email, { fullName })
+    posthog.capture('Join Waiting List', { fullName, email })
+
     joinWaitingListMutation.mutate({ email, fullName })
   }
 
