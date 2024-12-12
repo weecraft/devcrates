@@ -8,6 +8,8 @@ You can access this site on _[https://devcrates.site](https://devcrates.site)_
 
 _Screenshots:_
 
+![View](https://cdn.hashnode.com/res/hashnode/image/upload/v1733990991229/49886a53-896d-4b9c-9146-dad03454f1dd.png)
+
 ## Motivation
 
 I've been a developer for a long time, and I've always wanted to have a place where I can find all the resources I need to be productive. I wanted to create a website that would be a one-stop-shop for all my developer needs, with a focus on performance, reliability, and ease of use.
